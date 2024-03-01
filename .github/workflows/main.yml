@@ -24,7 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Runs a set of commands using the runners shell
-      - name: Build and run dev container
-        run: |
-          pnpm run build
+      - name: Build and run dev container task
+        uses: devcontainers/ci@v0.3
+        with:
+          # Change this to be your CI task/script
+          runCmd: |
+            pnpm run build
