@@ -30,4 +30,5 @@ jobs:
           # Change this to be your CI task/script
           runCmd: |
             cd react-container-test
-            npm run build
+            pnpm install
+            pnpm run build
