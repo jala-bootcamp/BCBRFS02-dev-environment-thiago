@@ -4,8 +4,11 @@ FROM node:20
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and pnpm-lock.yaml to the working directory
-COPY package.json pnpm-lock.yaml ./
+# Copy package.json to the working directory
+COPY package.json ./
+
+# Copy pnpm-lock.yaml to the working directory
+COPY pnpm-lock.yaml ./
 
 # Install pnpm 
 RUN npm install -g pnpm
